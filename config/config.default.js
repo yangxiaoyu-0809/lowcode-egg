@@ -41,6 +41,14 @@ module.exports = appInfo => {
     agent: false,
   };
 
+  const sequelize ={
+    username: 'root',
+    password: 'root123',
+    database: 'egg_test',
+    host: 'localhost',
+    dialect: 'mysql'
+  }
+
   const cors = {
     // 这里是允许所有的跨域请求，如有需要可自己查阅文档进行特殊配置
     origin: "*",
@@ -58,6 +66,7 @@ module.exports = appInfo => {
     ...config,
     ...userConfig,
     mysql,
+    sequelize,
     cors,
     security
   };

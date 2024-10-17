@@ -8,6 +8,7 @@
 */
 // app/extend/context.js
 const { v4: uuidv4 } = require('uuid');
+const sd = require('silly-datetime');
 module.exports = {
     // 在这里规范一些返回数据的格式
     // 成功
@@ -42,7 +43,7 @@ module.exports = {
     },
     cTime() {
         // 返回当前的时间
-        return +new Date();
+        return  sd.format(new Date(),'YYYY-MM-DD HH:mm:ss');
     },
     uuid() {
         return uuidv4().replace("-", "").substr(0, 12);

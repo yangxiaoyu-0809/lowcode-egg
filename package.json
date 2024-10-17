@@ -8,8 +8,12 @@
   },
   "dependencies": {
     "egg": "^3.17.5",
+    "egg-cors": "^3.0.1",
     "egg-mysql": "^4.0.0",
     "egg-scripts": "2",
+    "egg-sequelize": "^6.0.0",
+    "mysql2": "^3.11.3",
+    "silly-datetime": "^0.1.2",
     "uuid": "^10.0.0"
   },
   "devDependencies": {
