@@ -64,7 +64,7 @@ class BlockController extends Controller {
             message: '更新区块成功',
         };
     }
-    async deleteBlock() {
+    async delBlock() {
         const { ctx } = this;
         const { id } = ctx.params;
         const result = await ctx.service.block.deleteBlock(id);
@@ -74,7 +74,6 @@ class BlockController extends Controller {
             message: '删除区块成功',
         };
     }
-
 }
 
 

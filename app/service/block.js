@@ -33,10 +33,11 @@ class BlockService extends Service {
     //     const { ctx } = this;
     //     return this.Block.update(file, { where: { id } });
     // }
-    // async deleteBlock(id) {
-    //     const { ctx } = this;
-    //     return this.Block.destroy({ where: { id } });
-    // }
+    //删除区块
+    async deleteBlock(id) {
+        const { ctx } = this;
+        return this.Block.destroy({ where: { id } });
+    }
 
     // 查询表中的区块列表
     // async listBlock(params){

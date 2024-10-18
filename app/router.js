@@ -14,6 +14,8 @@ module.exports = app => {
   router.get(urls.blocks.base, controller.block.listBlocks);
   //新建区块保存
   router.post(urls.blocks.base, controller.block.createBlock);
+  //删除区块
+  router.delete(urls.blocks.base+'/:id',controller.block.delBlock)
   //新建分组保存
   router.post(urls.groups.base, controller.group.addGroup);
   //获取分组列表
