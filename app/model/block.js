@@ -13,6 +13,7 @@ module.exports = app => {
         groupName: STRING,
         screenshot: TEXT,
         schema: TEXT,
+        remark:STRING,
         created_at: DATE,
         updated_at: DATE,
     }, {

@@ -32,9 +32,6 @@ class BlockController extends Controller {
         };
     }
 
-
-
-
     async getBlock() {
         const { ctx } = this;
         const { id } = ctx.params;
