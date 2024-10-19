@@ -17,7 +17,11 @@ class BlockService extends Service {
                     { title: { [Op.like]: `%${params}%` } },
                     { groupName: { [Op.like]: `%${params}%` } }
                 ]
-            }
+            },
+            order:[
+                "groupId",   //根据id排序
+                ["groupId","desc"]//根据id倒序
+            ],
         });
     }
     // async getBlockByPk(id) {

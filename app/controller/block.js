@@ -45,7 +45,6 @@ class BlockController extends Controller {
         const { ctx } = this;
         const { block } = ctx.request.body;
         const result = await ctx.service.block.createBlock(block);
-        ctx.logger.info('create block result: ', result);
         ctx.body = {
             code: 0,
             message: '创建区块成功',
@@ -56,7 +55,6 @@ class BlockController extends Controller {
         ctx.logger.info('in update block');
         const { id } = ctx.params;
         const { block } = ctx.request.body;
-        ctx.logger.info('update block id: %s, block: %s', id, block);
         const result = await ctx.service.block.updateBlock(id, block);
         ctx.logger.info('update block result: ', result);
         ctx.body = {
@@ -68,7 +66,6 @@ class BlockController extends Controller {
         const { ctx } = this;
         const { id } = ctx.params;
         const result = await ctx.service.block.deleteBlock(id);
-        ctx.logger.info('delete block result: ', result);
         ctx.body = {
             code: 0,
             message: '删除区块成功',
