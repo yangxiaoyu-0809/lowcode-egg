@@ -10,5 +10,9 @@ module.exports = {
     //分组相关
     groups:{
         base:'/api/groups',
+    },
+    //页面相关
+    pageMg:{
+        base:'/api/pageMg',
     }
 }
